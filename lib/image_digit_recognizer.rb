@@ -1,5 +1,14 @@
 class ImageDigitRecognizer
 
+  def process_character(data)
+    number = DigitData.index(data)
+    unless number == nil
+      number
+    else
+      '?'
+    end
+  end
+
   DigitData = [
     # 0
     [
@@ -72,9 +81,5 @@ class ImageDigitRecognizer
       "   "
     ]
   ]
-
-  def process_character(data)
-    DigitData.index(data)
-  end
 
 end

@@ -8,6 +8,12 @@ describe ImageDigitRecognizer do
     end
   end
 
+  it "returns ? for illegible number" do
+    SampleIllegibleNumbers.each do |sampleIllegibleNumber|
+      subject.process_character(sampleIllegibleNumber).should == '?'
+    end
+  end
+
   SampleDigitData = [
     # 0
     [
@@ -77,6 +83,50 @@ describe ImageDigitRecognizer do
       " _ ",
       "|_|",
       " _|",
+      "   "
+    ]
+  ]
+
+  SampleIllegibleNumbers = [
+    [
+      "   ",
+      "  ",
+      "   ",
+      "   "
+    ],
+    [
+      "   ",
+      "   ",
+      "   "
+    ],
+    [
+      "   ",
+      "   ",
+      "   ",
+      "   "
+    ],
+    [
+      " _ ",
+      "  |",
+      " _|",
+      "   "
+    ],
+    [
+      " _ ",
+      "|  ",
+      "|_ ",
+      "   "
+    ],
+    [
+      " _ ",
+      "| |",
+      "| |",
+      "   "
+    ],
+    [
+      "   ",
+      "| |",
+      "|_|",
       "   "
     ]
   ]
