@@ -1,0 +1,26 @@
+require "image_line_splitter"
+
+describe ImageLineSplitter do
+
+  it "split multiple image lines into an array with elements consist of individual line image" do
+    line_data_arr = subject.split_lines(SampleImageData)
+    line_data_arr.length.should == 3
+  end
+
+  SampleImageData = [
+    "    _  _     _  _  _  _  _ ",
+    " |  _| _||_||_ |_   ||_||_|",
+    " | |_  _|  | _||_|  ||_| _|",
+    "                           ",
+    "    _  _     _  _  _  _  _ ",
+    " |  _| _||_||_ |_   ||_||_|",
+    " | |_  _|  | _||_|  ||_| _|",
+    "                           ",
+    "    _  _     _  _  _  _  _ ",
+    " |  _| _||_||_ |_   ||_||_|",
+    " | |_  _|  | _||_|  ||_| _|",
+    "                           "
+  ]
+
+end
+
