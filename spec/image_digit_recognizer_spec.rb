@@ -25,8 +25,8 @@ describe ImageDigitRecognizer do
     # 1
     [
       "   ",
-      " | ",
-      " | ",
+      "  |",
+      "  |",
       "   "
     ],
     # 2

@@ -20,8 +20,8 @@ class ImageDigitRecognizer
     # 1
     [
       "   ",
-      " | ",
-      " | ",
+      "  |",
+      "  |",
       "   "
     ],
     # 2
